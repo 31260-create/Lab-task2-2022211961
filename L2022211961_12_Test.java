@@ -3,6 +3,15 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class L2022211961_12_Test {
+/**
+     * <pre>
+     * 任何数乘以0都等于0。
+     * 负数乘以0应该返回错误。
+     * 非数字字符串乘以0应该返回错误。
+     * 正常的数字乘法。
+     * 巨大数字乘法。
+     * </pre>
+     */
     @Test
     public void test(){
         Solution12 s = new Solution12() ;
