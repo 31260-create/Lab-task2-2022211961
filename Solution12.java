@@ -17,6 +17,7 @@ import java.util.*;
 
 class Solution {
     public String multiply(String num1, String num2) {
+		// 添加了输入验证
         for (int i = 0; i < num1.length(); i++) {
             if(num1.charAt(i) < '0' || num1.charAt(i) > '9') {
                 return "error";
@@ -28,9 +29,11 @@ class Solution {
             }
         }
 
+		// 将|替换为||
         if (num1.equals("0") ||num2.equals("0")) {
             return "0";
         }
+		// 添加了缺失的分号
         String ans = "0";
         int m = num1.length(), n = num2.length();
         for (int i = n - 1; i >= 0; i--) {
@@ -49,6 +52,7 @@ class Solution {
             if (add != 0) {
                 curr.append(add % 10);
             }
+			// 将==替换为=
             ans = addStrings(ans, curr.reverse().toString());
         }
         return ans;
